@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <v-app>
+    <v-app class="white">
       <v-jumbotron  class="main-jumbo"  color="white">
         <v-container fill-height>
           <v-layout align-center>
@@ -31,10 +31,10 @@
         <v-container  grid-list-xl text-xs-center mt-5> 
           <h2 class="display-1 mb-4">Produits Populaire</h2>
           <v-layout wrap justify-space-around="">
-            <v-flex v-for="i in 3" xs3 :key="i">
-              <v-card flat>
+            <v-flex v-for="i in 3" xs4 :key="i">
+              <v-card flat hover>
                 <v-card-media src="/static/products/pietra-schwarzler-453095-unsplash.jpg" height="300px"></v-card-media>
-                <v-card-title primary-title class="">Kaftan Fasi</v-card-title>
+                <v-card-title primary-title class="subheading">Kaftan Fasi</v-card-title>
               </v-card>
             </v-flex>
           </v-layout>
@@ -93,7 +93,7 @@ export default {
   position: absolute;
   z-index: 10;
   top: 150px;
-  left: 150px;
+  left: 11%;
 }
 
 .product-container{
