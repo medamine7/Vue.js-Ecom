@@ -35,6 +35,7 @@
               <v-card flat hover>
                 <v-card-media src="/static/products/pietra-schwarzler-453095-unsplash.jpg" height="200px"></v-card-media>
                 <v-card-title primary-title class="">Kaftan Fasi</v-card-title>
+
               </v-card>
             </v-flex>
           </v-layout>
