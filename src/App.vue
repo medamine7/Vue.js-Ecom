@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <v-app>
-      <v-jumbotron  class="main-jumbo"  color="white">
+    <v-app class="white">
+      <v-jumbotron  class="main-jumbo" height="30vw" color="white">
         <v-container fill-height>
           <v-layout align-center>
             <v-flex>
@@ -28,12 +28,12 @@
         </v-toolbar>
         <router-view></router-view>
         </v-flex>
-        <v-container  grid-list-xl text-xs-center mt-5> 
+        <v-container fluid grid-list-xl text-xs-center pt-5 class="grey lighten-4"> 
           <h2 class="display-1 mb-4">Produits Populaire</h2>
-          <v-layout wrap justify-space-around="">
+          <v-layout wrap justify-space-around>
             <v-flex v-for="i in 3" xs3 :key="i">
-              <v-card flat>
-                <v-card-media src="/static/products/pietra-schwarzler-453095-unsplash.jpg" height="300px"></v-card-media>
+              <v-card flat hover>
+                <v-card-media src="/static/products/pietra-schwarzler-453095-unsplash.jpg" height="200px"></v-card-media>
                 <v-card-title primary-title class="">Kaftan Fasi</v-card-title>
               </v-card>
             </v-flex>
@@ -47,6 +47,7 @@
 <script>
 export default {
   name: 'App',
+
 }
 </script>
 
@@ -89,11 +90,11 @@ export default {
 }
 
 .main-jumbo{
-  width: 450px;
+  width: 30vw;
   position: absolute;
   z-index: 10;
-  top: 150px;
-  left: 150px;
+  top: 10%;
+  left: 11%;
 }
 
 .product-container{
