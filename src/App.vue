@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-app class="white">
-      <v-jumbotron  class="main-jumbo" height="30vw" color="white">
+      <v-jumbotron  class="main-jumbo logo-container" height="30vw" color="white">
         <v-container fill-height>
           <v-layout align-center>
             <v-flex>
@@ -28,18 +28,19 @@
         </v-toolbar>
         <router-view></router-view>
         </v-flex>
-        <v-container fluid grid-list-xl text-xs-center pt-5 class="grey lighten-4"> 
-          <h2 class="display-1 mb-4">Produits Populaire</h2>
-          <v-layout wrap justify-space-around>
-            <v-flex v-for="i in 3" xs3 :key="i">
-              <v-card flat hover>
-                <v-card-media src="/static/products/pietra-schwarzler-453095-unsplash.jpg" height="200px"></v-card-media>
-                <v-card-title primary-title class="">Kaftan Fasi</v-card-title>
-
-              </v-card>
-            </v-flex>
-          </v-layout>
+        <v-container fluid pt-5 class="grey lighten-4"> 
+          <v-container grid-list-xl text-xs-center> 
+            <h2 class="display-1 mb-4">Produits Populaires</h2>
+            <v-layout wrap justify-space-around>
+              <v-flex v-for="i in 12" xs4 :key="i">
+                <v-card flat hover class="wow fadeInUp" data-wow-delay="0s">
+                  <v-card-media src="/static/products/pietra-schwarzler-453095-unsplash.jpg" height="200px"></v-card-media>
+                  <v-card-title primary-title class="">Kaftan Fasi <v-spacer></v-spacer><strong>1500MAD</strong></v-card-title>
+                </v-card>
+              </v-flex>
+            </v-layout>
         </v-container>
+      </v-container>
       </v-layout>
    </v-app>
   </div>
@@ -48,6 +49,17 @@
 <script>
 export default {
   name: 'App',
+  created(){
+    window.addEventListener("scroll",()=>{
+      parallax();
+
+    }); 
+
+    function parallax(){
+      var scrolled =window.scrollY;
+      document.querySelector('#left-home-picture img').style.top=-(scrolled*0.3)+'px';
+  }
+  }
 
 }
 </script>
@@ -82,9 +94,9 @@ export default {
 
   img{
     margin: auto;
-    top: -50%;
-    height: 150%;
-    width: auto;
+    height: 135%;
+    position: absolute;
+    width: auto;  
     position: relative;
     left: -86%;
   }
