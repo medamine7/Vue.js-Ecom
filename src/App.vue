@@ -28,19 +28,18 @@
         </v-toolbar>
         <router-view></router-view>
         </v-flex>
-        <v-container fluid pt-5 class="grey lighten-4"> 
-          <v-container grid-list-xl text-xs-center> 
+          <v-container grid-list-xl pt-5> 
             <h2 class="display-1 mb-4">Produits Populaires</h2>
             <v-layout wrap justify-space-around>
-              <v-flex v-for="i in 12" xs4 :key="i">
-                <v-card flat hover class="wow fadeInUp" data-wow-delay="0s">
+              <v-flex v-for="i in 12" :key="i">
+                <v-card flat hover class="wow fadeInUp mx-auto" data-wow-delay="" width="250px">
                   <v-card-media src="/static/products/pietra-schwarzler-453095-unsplash.jpg" height="200px"></v-card-media>
                   <v-card-title primary-title class="">Kaftan Fasi <v-spacer></v-spacer><strong>1500MAD</strong></v-card-title>
                 </v-card>
               </v-flex>
             </v-layout>
+            <v-btn large color="red lighten-4" :ripple="{ class: 'error--text' }" depressed class="view-collection-button">Voir le reste</v-btn>
         </v-container>
-      </v-container>
       </v-layout>
    </v-app>
   </div>
@@ -49,6 +48,12 @@
 <script>
 export default {
   name: 'App',
+  data(){
+    return{
+      wowdelay : 0
+    }
+  },
+
   created(){
     window.addEventListener("scroll",()=>{
       parallax();
@@ -123,4 +128,10 @@ export default {
     width: 100%;
   }
 }
+
+.view-collection-button{
+
+  // border: 3px solid #FF8A80;
+}
+
 </style>
