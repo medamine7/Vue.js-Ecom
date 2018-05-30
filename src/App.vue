@@ -53,7 +53,7 @@
       </v-layout>
       <v-footer color="" class="pa-3 pt-5 footer wow fadeInUp" dark height="auto">
         <v-layout row wrap class="text-xs-left" justify-center>
-          <v-flex>
+          <v-flex lg2 md2 sm4 xs12>
             <h2 class="footer-heading pb-3">Collection</h2>
             <ul class="wow fadeInLeft">
               <li><a href="">Swiri</a></li>
@@ -62,13 +62,13 @@
               <li><a href="">Chamali</a></li>
             </ul>
           </v-flex>
-          <v-flex>
+          <v-flex lg2 md2 sm4 xs12>
             <h2 class="footer-heading pb-3">Commande</h2>
             <ul class="wow fadeInLeft">
               <li><a href="">Statut de commande</a></li>
             </ul>
           </v-flex>
-          <v-flex>
+          <v-flex lg2 md2 sm4 xs12>
             <h2 class="footer-heading pb-3">Qui somme nous?</h2>
             <ul class="wow fadeInLeft">
               <li><a href="">Hasnae Kaftan</a></li>
