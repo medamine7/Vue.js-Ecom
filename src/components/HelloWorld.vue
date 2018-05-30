@@ -3,19 +3,9 @@
     
     <v-layout row wrap justify-end >
       <v-flex xs9 id="right-home-picture">
-          <v-carousel hide-delimiters="true" class="hero-carousel">
-            <v-carousel-item
-              :src="'/static/naganath-chiluveru-345852-unsplash.jpg'"
-              transition="fade"
-              reverse-transition="fade"
-            ></v-carousel-item>
-            <v-carousel-item
-              src='/static/edwin-andrade-158037-unsplash.jpg'
-              transition="fade"
-              reverse-transition="fade"
-            ></v-carousel-item>
-            <v-carousel-item
-              src='/static/pete-bellis-189599-unsplash.jpg'
+          <v-carousel hide-delimiters class="hero-carousel">
+            <v-carousel-item v-for="(image,index) in images" :key="index"
+              :src="image"
               transition="fade"
               reverse-transition="fade"
             ></v-carousel-item>
@@ -52,3 +42,18 @@
     box-shadow: none;
   }
 </style>
+
+
+<script>
+  export default{
+    data(){
+      return {
+        images : [
+          '/static/naganath-chiluveru-345852-unsplash.jpg',
+          '/static/edwin-andrade-158037-unsplash.jpg',
+          '/static/pete-bellis-189599-unsplash.jpg'
+        ]
+      }
+    }
+  }
+</script>
