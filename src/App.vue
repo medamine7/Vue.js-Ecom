@@ -30,15 +30,19 @@
         </v-flex>
           <v-container grid-list-xl pt-5> 
             <h2 class="display-1 mb-4">Produits Populaires</h2>
-            <v-layout wrap justify-space-around>
-              <v-flex v-for="i in 12" :key="i">
-                <v-card flat hover class="wow fadeInUp mx-auto" data-wow-delay="" width="250px">
-                  <v-card-media src="/static/products/pietra-schwarzler-453095-unsplash.jpg" height="200px"></v-card-media>
-                  <v-card-title primary-title class="">Kaftan Fasi <v-spacer></v-spacer><strong>1500MAD</strong></v-card-title>
-                </v-card>
+            <v-layout row wrap justify-center>
+              <v-flex xs10>
+                <v-layout wrap justify-center row>
+                <v-flex v-for="i in 6" :key="i" xl4 lg4 md4 sm6 xs12>
+                  <v-card flat hover class="wow fadeInUp" data-wow-delay="" >
+                    <v-card-media src="/static/products/pietra-schwarzler-453095-unsplash.jpg" height="200px"></v-card-media>
+                    <v-card-title primary-title class="">Kaftan Fasi <v-spacer></v-spacer><strong>1500MAD</strong></v-card-title>
+                  </v-card>
+                </v-flex>
+              </v-layout>
               </v-flex>
-            </v-layout>
-            <v-btn large color="red lighten-4" :ripple="{ class: 'error--text' }" depressed class="view-collection-button">Voir le reste</v-btn>
+            </v-layout>  
+            <v-btn large color="red darken-2" dark class="subheading" depressed>Voir le reste</v-btn>
         </v-container>
       </v-layout>
    </v-app>
@@ -129,9 +133,5 @@ export default {
   }
 }
 
-.view-collection-button{
-
-  // border: 3px solid #FF8A80;
-}
 
 </style>

@@ -14,6 +14,11 @@
               transition="fade"
               reverse-transition="fade"
             ></v-carousel-item>
+            <v-carousel-item
+              src='/static/pete-bellis-189599-unsplash.jpg'
+              transition="fade"
+              reverse-transition="fade"
+            ></v-carousel-item>
         </v-carousel>
       </v-flex>
     </v-layout>
