@@ -1,15 +1,11 @@
 <template>
   <div>
-    <v-container text-xs-center fluid class="pa-0 index-container">
+    <v-container text-xs-center fluid class="pa-0 index-container white">
       <v-jumbotron  class="main-jumbo logo-container " height="30vw" color="white">
         <v-container fill-height>
           <v-layout wrap align-center>
             <v-flex >
               <img id="logo" src="../assets/images/logo.png" alt="HASNAE KAFTAN" >                
-            </v-flex>
-            <v-flex class="text-xs-left">
-              <h2 class="title">Haute Couture Traditionnelle</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, laudantium.</p>
             </v-flex>
           </v-layout>
         </v-container>
@@ -23,6 +19,15 @@
             reverse-transition="fade"
             ></v-carousel-item>
           </v-carousel>
+        </v-flex>
+        <v-flex class="text-xs-center white pa-5 mt-5" xs12>
+          <v-layout justify-center>
+              <v-flex xs7>
+                <h2 class="display-1 indicator mb-4">Haute couture traditionelle</h2>
+                <p id="portrait-text" class="body-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum natus saepe recusandae perferendis possimus cupiditate nam assumenda dolorem harum quidem ab voluptatum laudantium suscipit, quos dicta eligendi odio ipsam perspiciatis praesentium inventore quia dolores dignissimos aspernatur tempora. Facilis, commodi, quibusdam.</p>
+                <v-btn large color="red" dark class="subheading wow fadeIn" depressed>Commander</v-btn>
+              </v-flex>
+          </v-layout>
         </v-flex>
       </v-layout>
     </v-container>
@@ -149,6 +154,12 @@
 #portrait{
   width: auto;  
   height: 250px;
+  transition: .2s all;
+  filter:grayscale(1);
+
+  &:hover{
+    filter:grayscale(0);
+  }
 }
 
 #portrait-text{
